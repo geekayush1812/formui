@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="form-container delay">
+        <h1>Fill in your details</h1>
+        <form id="form" name="form">
+          <div class="input-container">
+            <label for="firstname">
+              <span>Firstname</span>
+              <input type="text" name="firstname" id="firstname" autofocus />
+            </label>
+          </div>
+          <div class="input-container">
+            <label for="lastname">
+              <span>Lastname</span>
+              <input type="text" name="lastname" id="lastname" />
+            </label>
+          </div>
+
+          <div class="input-container">
+            <fieldset id="gender">
+              <legend>Gender</legend>
+              <div class="gender-container">
+                <label for="male">
+                  <input type="radio" name="gender" id="male" value="male" />
+                  <div class="radio-btn">
+                    <img src="./male.png" alt="male icon" />
+                    <span>Male</span>
+                  </div>
+                </label>
+                <label for="female">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                  <div class="radio-btn">
+                    <img src="./female.png" alt="female icon" />
+                    <span>Female</span>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="input-container">
+            <fieldset id="maritalstatus">
+              <legend>Marital Status</legend>
+              <div class="marital-status-container">
+                <label for="married">
+                  <input
+                    type="radio"
+                    name="maritalstatus"
+                    id="married"
+                    value="married"
+                  />
+                  <div class="radio-btn">
+                    <span>Married</span>
+                  </div>
+                </label>
+                <label for="unmarried">
+                  <input
+                    type="radio"
+                    name="maritalstatus"
+                    id="unmarried"
+                    value="unmarried"
+                  />
+                  <div class="radio-btn">
+                    <span>Unmarried</span>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="input-container">
+            <label for="spousename">
+              <span>Name of Spouse</span>
+              <input type="text" name="spousename" id="spousename" disabled />
+            </label>
+          </div>
+
+          <div class="input-container">
+            <label for="otherdetails">
+              <span>Other Details</span>
+              <textarea
+                id="otherdetails"
+                name="otherdetails"
+                rows="4"
+                cols="40"
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="action-btn-container">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

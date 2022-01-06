@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: hsla(188, 99%, 39%, 1);
+  --white: hsl(0, 0%, 100%);
+  --roundness: 0.5rem;
+}
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: var(--white);
+  max-width: 95%;
+  min-width: 320px;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  border-radius: var(--roundness);
+  box-shadow: 1px 1px 6px hsla(188, 99%, 39%, 0.1),
+    3px 12px 24px hsla(188, 99%, 39%, 0.09),
+    3px 18px 30px hsla(188, 99%, 39%, 0.09);
+}
+.form-container > h1:first-child {
+  font-size: 1.2rem;
+  color: hsla(188, 99%, 10%, 1);
+  margin-bottom: 0.8rem;
+}
+
+.input-container {
+  margin-bottom: 0.7rem;
+}
+.input-container,
+h1 {
+  transition: opacity 300ms ease-in;
+}
+
+form > .input-container > label > span,
+form > .input-container > fieldset > legend,
+form > .input-container span {
+  color: hsla(188, 99%, 10%, 1);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+input,
+textarea,
+fieldset {
+  display: block;
+  outline: none;
+  border: 0;
+}
+input[type='radio'] {
+  display: none;
+  appearance: none;
+}
+textarea {
+  resize: none;
+}
+
+input[type='text'],
+textarea {
+  padding: 0.6rem 0.5rem;
+  border: 1px solid hsla(188, 29%, 70%, 0.4);
+  border-radius: var(--roundness);
+  width: 100%;
+  color: hsla(188, 29%, 30%, 1);
+}
+input[type='text']:focus {
+  --grey: hsla(188, 99%, 90%, 0.9);
+  border-color: var(--grey);
+  box-shadow: 0px 0px 6px var(--grey);
+}
+input[type='text']:disabled {
+  background-color: hsla(188, 29%, 90%, 0.5);
+  cursor: not-allowed;
+}
+
+.gender-container,
+.marital-status-container {
+  display: flex;
+  align-items: center;
+}
+.gender-container > label:first-child,
+.marital-status-container > label:first-child {
+  margin-right: 1rem;
+}
+
+.gender-container > label,
+.marital-status-container > label {
+  cursor: pointer;
+}
+
+.radio-btn {
+  border: 1px solid hsla(188, 29%, 70%, 0.4);
+  border-radius: var(--roundness);
+  height: 60px;
+  min-width: 60px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.radio-btn > img {
+  height: 24px;
+  width: 24px;
+}
+.radio-btn span {
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+}
+
+input[type='radio']:checked + .radio-btn {
+  box-shadow: 0px 0px 3px hsla(188, 99%, 70%, 0.9);
+  position: relative;
+}
+input[type='radio']:checked + .radio-btn::after {
+  content: '';
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  background-color: hsla(188, 99%, 70%, 0.9);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.action-btn-container {
+  width: 80%;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.action-btn-container button {
+  padding: 0.5rem 2rem;
+  appearance: none;
+  outline: none;
+  border: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.action-btn-container button[type='submit'] {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+.action-btn-container button[type='reset'] {
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: 1px solid var(--primary-color);
+}
+
+.thankyou-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.thankyou-container h3 {
+  opacity: 0;
+  font-size: 1.2rem;
+  animation: fadeIn 300ms ease-in forwards;
+  color: white;
+}
+
+.fade-out {
+  opacity: 0;
+}
+.delay {
+  transition: max-height 1s 500ms ease-in, background-color 300ms 800ms ease-in;
+}
+.shrink-and-fill {
+  max-height: 200px;
+  background-color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
