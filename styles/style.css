@@ -21,7 +21,7 @@ main {
   justify-content: center;
 }
 
-.form-container {
+.formContainer {
   background-color: var(--white);
   max-width: 95%;
   min-width: 320px;
@@ -34,23 +34,24 @@ main {
     3px 12px 24px hsla(188, 99%, 39%, 0.09),
     3px 18px 30px hsla(188, 99%, 39%, 0.09);
 }
-.form-container > h1:first-child {
+.formContainer > h1:first-child {
   font-size: 1.2rem;
   color: hsla(188, 99%, 10%, 1);
   margin-bottom: 0.8rem;
 }
 
-.input-container {
+.inputContainer {
   margin-bottom: 0.7rem;
 }
-.input-container,
+.inputContainer,
+.actionButtonContainer,
 h1 {
-  transition: opacity 300ms ease-in;
+  transition: opacity 200ms ease-in;
 }
 
-form > .input-container > label > span,
-form > .input-container > fieldset > legend,
-form > .input-container span {
+form > .inputContainer > label > span,
+form > .inputContainer > fieldset > legend,
+form > .inputContainer span {
   color: hsla(188, 99%, 10%, 1);
   display: block;
   margin-bottom: 0.2rem;
@@ -89,22 +90,22 @@ input[type='text']:disabled {
   cursor: not-allowed;
 }
 
-.gender-container,
-.marital-status-container {
+.genderContainer,
+.maritalStatusContainer {
   display: flex;
   align-items: center;
 }
-.gender-container > label:first-child,
-.marital-status-container > label:first-child {
+.genderContainer > label:first-child,
+.maritalStatusContainer > label:first-child {
   margin-right: 1rem;
 }
 
-.gender-container > label,
-.marital-status-container > label {
+.genderContainer > label,
+.maritalStatusContainer > label {
   cursor: pointer;
 }
 
-.radio-btn {
+.radioButton {
   border: 1px solid hsla(188, 29%, 70%, 0.4);
   border-radius: var(--roundness);
   height: 60px;
@@ -115,20 +116,20 @@ input[type='text']:disabled {
   align-items: center;
   justify-content: center;
 }
-.radio-btn > img {
+.radioButton > img {
   height: 24px;
   width: 24px;
 }
-.radio-btn span {
+.radioButton span {
   font-size: 0.9rem;
   margin-top: 0.1rem;
 }
 
-input[type='radio']:checked + .radio-btn {
+input[type='radio']:checked + .radioButton {
   box-shadow: 0px 0px 3px hsla(188, 99%, 70%, 0.9);
   position: relative;
 }
-input[type='radio']:checked + .radio-btn::after {
+input[type='radio']:checked + .radioButton::after {
   content: '';
   height: 8px;
   width: 8px;
@@ -139,7 +140,7 @@ input[type='radio']:checked + .radio-btn::after {
   left: 4px;
 }
 
-.action-btn-container {
+.actionButtonContainer {
   width: 80%;
   margin: 1rem auto 0 auto;
   display: flex;
@@ -147,7 +148,7 @@ input[type='radio']:checked + .radio-btn::after {
   justify-content: space-around;
 }
 
-.action-btn-container button {
+.actionButtonContainer button {
   padding: 0.5rem 2rem;
   appearance: none;
   outline: none;
@@ -156,17 +157,17 @@ input[type='radio']:checked + .radio-btn::after {
   cursor: pointer;
 }
 
-.action-btn-container button[type='submit'] {
+.actionButtonContainer button[type='submit'] {
   color: var(--white);
   background-color: var(--primary-color);
 }
-.action-btn-container button[type='reset'] {
+.actionButtonContainer button[type='reset'] {
   color: var(--primary-color);
   background-color: var(--white);
   border: 1px solid var(--primary-color);
 }
 
-.thankyou-container {
+.thankyouContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,20 +177,20 @@ input[type='radio']:checked + .radio-btn::after {
   right: 0;
   bottom: 0;
 }
-.thankyou-container h3 {
+.thankyouContainer h3 {
   opacity: 0;
   font-size: 1.2rem;
-  animation: fadeIn 300ms ease-in forwards;
+  animation: fadeIn 250ms ease-in forwards;
   color: white;
 }
 
-.fade-out {
+.fadeOut {
   opacity: 0;
 }
 .delay {
-  transition: max-height 1s 500ms ease-in, background-color 300ms 800ms ease-in;
+  transition: max-height 700ms ease-in, background-color 500ms 300ms ease-in;
 }
-.shrink-and-fill {
+.shrinkAndFill {
   max-height: 200px;
   background-color: var(--primary-color);
 }

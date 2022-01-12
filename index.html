@@ -5,35 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form UI</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="scripts/main.js" defer></script>
   </head>
   <body>
     <main>
-      <div class="form-container delay">
+      <div class="formContainer delay">
         <h1>Fill in your details</h1>
         <form id="form" name="form">
-          <div class="input-container">
+          <div class="inputContainer">
             <label for="firstname">
               <span>Firstname</span>
               <input type="text" name="firstname" id="firstname" autofocus />
             </label>
           </div>
-          <div class="input-container">
+          <div class="inputContainer">
             <label for="lastname">
               <span>Lastname</span>
               <input type="text" name="lastname" id="lastname" />
             </label>
           </div>
 
-          <div class="input-container">
+          <div class="inputContainer">
             <fieldset id="gender">
               <legend>Gender</legend>
-              <div class="gender-container">
+              <div class="genderContainer">
                 <label for="male">
                   <input type="radio" name="gender" id="male" value="male" />
-                  <div class="radio-btn">
-                    <img src="./male.png" alt="male icon" />
+                  <div class="radioButton">
+                    <img src="assets/male.png" alt="male icon" />
                     <span>Male</span>
                   </div>
                 </label>
@@ -44,8 +44,8 @@
                     id="female"
                     value="female"
                   />
-                  <div class="radio-btn">
-                    <img src="./female.png" alt="female icon" />
+                  <div class="radioButton">
+                    <img src="assets/female.png" alt="female icon" />
                     <span>Female</span>
                   </div>
                 </label>
@@ -53,10 +53,10 @@
             </fieldset>
           </div>
 
-          <div class="input-container">
+          <div class="inputContainer">
             <fieldset id="maritalstatus">
               <legend>Marital Status</legend>
-              <div class="marital-status-container">
+              <div class="maritalStatusContainer">
                 <label for="married">
                   <input
                     type="radio"
@@ -64,7 +64,7 @@
                     id="married"
                     value="married"
                   />
-                  <div class="radio-btn">
+                  <div class="radioButton">
                     <span>Married</span>
                   </div>
                 </label>
@@ -75,7 +75,7 @@
                     id="unmarried"
                     value="unmarried"
                   />
-                  <div class="radio-btn">
+                  <div class="radioButton">
                     <span>Unmarried</span>
                   </div>
                 </label>
@@ -83,14 +83,14 @@
             </fieldset>
           </div>
 
-          <div class="input-container">
+          <div class="inputContainer">
             <label for="spousename">
               <span>Name of Spouse</span>
               <input type="text" name="spousename" id="spousename" disabled />
             </label>
           </div>
 
-          <div class="input-container">
+          <div class="inputContainer">
             <label for="otherdetails">
               <span>Other Details</span>
               <textarea
@@ -102,7 +102,7 @@
             </label>
           </div>
 
-          <div class="action-btn-container">
+          <div class="actionButtonContainer">
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
           </div>
