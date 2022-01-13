@@ -70,6 +70,7 @@ input[type='radio'] {
 }
 textarea {
   resize: none;
+  font: inherit;
 }
 
 input[type='text'],
